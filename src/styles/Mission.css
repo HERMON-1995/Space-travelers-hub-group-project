@@ -1,0 +1,34 @@
+.mission-container {
+  width: 100%;
+}
+
+table {
+  width: 95%;
+  margin: 1% auto;
+  border-collapse: collapse;
+  padding: 0;
+}
+
+th {
+  margin: 0;
+  border: 1px solid #cac9c9;
+}
+
+td {
+  text-align: left;
+  border: 1px solid #cac9c9;
+  padding: 1%;
+}
+
+.description {
+  width: 70%;
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(212, 212, 212);
+}
+
+.header {
+  text-align: left;
+  padding-left: 1%;
+}
