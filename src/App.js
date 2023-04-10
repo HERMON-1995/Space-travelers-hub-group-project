@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-
         <Nav />
         <Routes>
           <Route path="/" element={<Rockets />} exact />
