@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <nav className="nav-bar">
       <img src={planet} alt="Logo" />
-      <h1>Space travelers Hub</h1>
+      <h1 className="h3">Space travelers Hub</h1>
       <NavLink className="nav-linkfirst" to="/">Rockets</NavLink>
       <NavLink className="nav-linksecond" to="/mission">Missions</NavLink>
       <NavLink className="nav-linkthird" to="/profile">My Profile</NavLink>
