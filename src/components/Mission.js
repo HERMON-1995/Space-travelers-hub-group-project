@@ -63,6 +63,10 @@ const Mission = () => {
     padding: '5%',
   };
   const tbstyle = { border: '1px solid #cac9c9' };
+  const tbDescription = {
+    width: '70%',
+    border: '1px solid #cac9c9',
+  };
   return (
     <div className="mission-container">
       <table>
@@ -78,8 +82,8 @@ const Mission = () => {
             return (
               <tr key={data.id}>
                 <td style={tbstyle}>{data.mission_name}</td>
-                <td style={tbstyle} className="description">{data.description}</td>
-                <td>
+                <td style={tbDescription} className="description">{data.description}</td>
+                <td style={tbstyle}>
                   <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.status}</button>
                 </td>
                 <td style={tbstyle}>
