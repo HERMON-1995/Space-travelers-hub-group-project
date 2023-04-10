@@ -62,26 +62,27 @@ const Mission = () => {
     backgroundColor: 'transparent',
     padding: '5%',
   };
+  const tbstyle = { border: '1px solid #cac9c9' };
   return (
     <div className="mission-container">
       <table>
         <tbody>
           <tr>
-            <th className="header">Mission</th>
-            <th className="header">Description</th>
-            <th className="header">Status</th>
-            <th className="header" aria-label="jheader" />
+            <th className="header" style={tbstyle}>Mission</th>
+            <th className="header" style={tbstyle}>Description</th>
+            <th className="header" style={tbstyle}>Status</th>
+            <th className="header" style={tbstyle} aria-label="jheader" />
           </tr>
           {missionData.map((data) => {
             const value = data.member;
             return (
               <tr key={data.id}>
-                <td>{data.mission_name}</td>
-                <td className="description">{data.description}</td>
+                <td style={tbstyle}>{data.mission_name}</td>
+                <td style={tbstyle} className="description">{data.description}</td>
                 <td>
                   <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.status}</button>
                 </td>
-                <td>
+                <td style={tbstyle}>
                   <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit">
                     {' '}
                     {data.decision}
