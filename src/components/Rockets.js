@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { retrieveRockets } from '../redux/rocketsSlice';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { retrieveRockets, reserveRocket } from '../redux/rocketsSlice';
 
 const Rocket = (props) => {
-  const { name, description, image } = props;
+  const {
+    id, name, description, image,
+  } = props;
+  const dispatch = useDispatch();
+  const handleReserve = () => {
+    dispatch(reserveRocket(id));
+  };
 
   return (
     <div className="card mb-3">
@@ -17,7 +23,7 @@ const Rocket = (props) => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{description}</p>
-            <button type="button" className="btn btn-primary my-5">Reserve Rocket</button>
+            <button type="button" onClick={handleReserve} className="btn btn-primary my-5">Reserve Rocket</button>
           </div>
         </div>
       </div>
@@ -26,6 +32,7 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -40,6 +47,7 @@ function Rockets() {
   const renderRockets = (rocketsInfo) => rocketsInfo.map((rckt) => (
     <Rocket
       key={rckt.id}
+      id={rckt.id}
       description={rckt.description}
       name={rckt.name}
       image={rckt.image}
