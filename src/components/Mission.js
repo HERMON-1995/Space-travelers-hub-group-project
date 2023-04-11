@@ -1,36 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Mission.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMission } from '../redux/missionsSlice';
 
 const Mission = () => {
-  const missionData = [{
-    id: 1,
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-    status: 'Not a Member',
-    decision: 'Join mission',
-    member: false,
-  }, {
-    id: 2,
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-    status: 'Active Member',
-    decision: 'Leave Mission',
-    member: true,
-  }, {
-    id: 3,
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-    status: 'Not a Member',
-    decision: 'Join mission',
-    member: false,
-  }, {
-    id: 4,
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-    status: 'Active Member',
-    decision: 'Leave Mission',
-    member: true,
-  }];
+  const { missionList } = useSelector((state) => state.missionReducer);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMission());
+  },
+  [dispatch]);
 
   const memberBtn = {
     color: 'White',
@@ -63,9 +44,9 @@ const Mission = () => {
     padding: '5%',
   };
   const tbstyle = { border: '1px solid #cac9c9' };
-  const tbDescription = {
-    width: '70%',
-    border: '1px solid #cac9c9',
+  const tbDesction = {
+    width: '55%',
+    textAlign: 'justify',
   };
   return (
     <div className="mission-container">
@@ -77,19 +58,19 @@ const Mission = () => {
             <th className="header" style={tbstyle}>Status</th>
             <th className="header" style={tbstyle} aria-label="jheader" />
           </tr>
-          {missionData.map((data) => {
-            const value = data.member;
+          {missionList.map((data) => {
+            const value = data.missionValue;
             return (
               <tr key={data.id}>
-                <td style={tbstyle}>{data.mission_name}</td>
-                <td style={tbDescription} className="description">{data.description}</td>
+                <td style={tbstyle}>{data.missionName}</td>
+                <td style={tbDesction} className="description">{data.missionDescription}</td>
                 <td style={tbstyle}>
-                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.status}</button>
+                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.memberShip}</button>
                 </td>
                 <td style={tbstyle}>
                   <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit">
                     {' '}
-                    {data.decision}
+                    {data.missionStatus}
                     {' '}
                   </button>
                 </td>

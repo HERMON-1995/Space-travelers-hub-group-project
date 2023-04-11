@@ -39,6 +39,10 @@ const missionsSlice = createSlice({
           id: details.mission_id,
           missionName: details.mission_name,
           missionDescription: details.description,
+          memberShip: 'Not a member',
+          missionStatus: 'Join Mission',
+          missionValue: false,
+
         }));
 
         return {
