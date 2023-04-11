@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/Mission.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMission } from '../redux/missionsSlice';
+import { getMission, reservemission } from '../redux/missionsSlice';
 
 const Mission = () => {
   const { missionList } = useSelector((state) => state.missionReducer);
@@ -47,6 +47,7 @@ const Mission = () => {
   const tbDesction = {
     width: '55%',
     textAlign: 'justify',
+    border: '1px solid #cac9c9',
   };
   return (
     <div className="mission-container">
@@ -65,7 +66,7 @@ const Mission = () => {
                 <td style={tbstyle}>{data.missionName}</td>
                 <td style={tbDesction} className="description">{data.missionDescription}</td>
                 <td style={tbstyle}>
-                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.memberShip}</button>
+                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit" onClick={() => dispatch(reservemission(data.id))}>{data.memberShip}</button>
                 </td>
                 <td style={tbstyle}>
                   <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit">
