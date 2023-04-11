@@ -13,6 +13,10 @@
   margin-right: 15px;
 }
 
+.nav-bar h1 {
+  font-size: 25px;
+}
+
 .nav-linkfirst {
   margin-left: 50%;
   color: lightskyblue;
