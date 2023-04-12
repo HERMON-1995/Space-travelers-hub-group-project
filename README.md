@@ -73,7 +73,7 @@ In order to run this project you need:
 
 ```sh
 download Node.js
-setup React
+setup React and Redux
 setup Linters
 ```
 
