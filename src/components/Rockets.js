@@ -2,15 +2,27 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { retrieveRockets, reserveRocket } from '../redux/rocketsSlice';
+import { retrieveRockets, reserveRocket, cancelReservation } from '../redux/rocketsSlice';
 
 const Rocket = (props) => {
   const {
-    id, name, description, image,
+    id, name, description, image, reserved,
   } = props;
   const dispatch = useDispatch();
+
   const handleReserve = () => {
     dispatch(reserveRocket(id));
+  };
+
+  const handleCancel = () => {
+    dispatch(cancelReservation(id));
+  };
+
+  const reserveButton = (reserveStatus) => {
+    if (!reserveStatus) {
+      return <button type="button" onClick={handleReserve} className="btn btn-primary my-5">Reserve Rocket</button>;
+    }
+    return <button type="button" onClick={handleCancel} className="btn btn-outline-danger my-5">Cancel Reservation</button>;
   };
 
   return (
@@ -23,7 +35,7 @@ const Rocket = (props) => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{description}</p>
-            <button type="button" onClick={handleReserve} className="btn btn-primary my-5">Reserve Rocket</button>
+            {reserveButton(reserved)}
           </div>
         </div>
       </div>
@@ -36,6 +48,7 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 function Rockets() {
@@ -51,6 +64,7 @@ function Rockets() {
       description={rckt.description}
       name={rckt.name}
       image={rckt.image}
+      reserved={rckt.reserved}
     />
   ));
   return (
