@@ -34,7 +34,10 @@ const Rocket = (props) => {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
-            <p className="card-text">{description}</p>
+            <p className="card-text">
+              { reserved ? <span className="badge bg-info me-1">Reserved</span> : '' }
+              {description}
+            </p>
             {reserveButton(reserved)}
           </div>
         </div>
