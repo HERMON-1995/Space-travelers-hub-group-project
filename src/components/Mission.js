@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/Mission.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMission, reservemission } from '../redux/missionsSlice';
+import { getMission, reservemission, cancelmission } from '../redux/missionsSlice';
 
 const Mission = () => {
   const { missionList } = useSelector((state) => state.missionReducer);
@@ -66,14 +66,23 @@ const Mission = () => {
                 <td style={tbstyle}>{data.missionName}</td>
                 <td style={tbDesction} className="description">{data.missionDescription}</td>
                 <td style={tbstyle}>
-                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit" onClick={() => dispatch(reservemission(data.id))}>{data.memberShip}</button>
+                  <button style={value ? memberBtn : ntmemberBtn} aria-label="member" type="submit">{data.memberShip}</button>
                 </td>
                 <td style={tbstyle}>
-                  <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit">
-                    {' '}
-                    {data.missionStatus}
-                    {' '}
-                  </button>
+                  { !data.missionValue
+                    ? (
+                      <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit" onClick={() => dispatch(reservemission(data.id))}>
+                        {' '}
+                        {data.missionStatus}
+                        {' '}
+                      </button>
+                    ) : (
+                      <button style={value ? leaveBtn : joinBtn} className="btndecision" aria-label="join" type="submit" onClick={() => dispatch(cancelmission(data.id))}>
+                        {' '}
+                        {data.missionStatus}
+                        {' '}
+                      </button>
+                    )}
                 </td>
               </tr>
             );
