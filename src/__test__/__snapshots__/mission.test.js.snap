@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="mission-container"
+>
+  <table>
+    <tbody>
+      <tr>
+        <th
+          className="header"
+          style={
+            Object {
+              "border": "1px solid #cac9c9",
+            }
+          }
+        >
+          Mission
+        </th>
+        <th
+          className="header"
+          style={
+            Object {
+              "border": "1px solid #cac9c9",
+            }
+          }
+        >
+          Description
+        </th>
+        <th
+          className="header"
+          style={
+            Object {
+              "border": "1px solid #cac9c9",
+            }
+          }
+        >
+          Status
+        </th>
+        <th
+          aria-label="jheader"
+          className="header"
+          style={
+            Object {
+              "border": "1px solid #cac9c9",
+            }
+          }
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
