@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/Mission.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMission, reservemission, cancelmission } from '../redux/missionsSlice';
+import { reservemission, cancelmission } from '../redux/missionsSlice';
 
 const Mission = () => {
   const { missionList } = useSelector((state) => state.missionReducer);
-
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getMission());
-  },
-  [dispatch]);
 
   const memberBtn = {
     color: 'White',
