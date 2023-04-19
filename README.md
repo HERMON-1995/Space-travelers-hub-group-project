@@ -1,4 +1,4 @@
-# space-travelers-hub-group-project
+# Space-travelers-hub-group-project
 
 <a name="readme-top"></a>
 
@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [space-travelers-hub-group-project] <a name="about-project"></a>
+# 📖 [Space-travelers-hub-group-project] <a name="about-project"></a>
 
-**[space-travelers-hub-group-project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
+**[Space-travelers-hub-group-project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -82,13 +82,13 @@ setup Linters
 Clone this repository to your desired folder:
 
 ```sh
-  cd space-travelers-hub-group-project
-  git https://github.com/HERMON-1995/space-travelers-hub-group-project.git
+  cd Space-travelers-hub-group-project
+  git clone https://github.com/HERMON-1995/Space-travelers-hub-group-project.git
 ```
 ### Install
  
  ```sh
- cd space-travelers-hub-group-project
+ cd Space-travelers-hub-group-project
  ```
  ```sh
  npm install
@@ -154,7 +154,7 @@ npx stylelint "**/*.{css,scss}"
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-    - [Issues](https://github.com/HERMON-1995/space-travelers-hub-group-project/issues)
+    - [Issues](https://github.com/HERMON-1995/Space-travelers-hub-group-project/issues?q=is%3Aissue+is%3Aclosed)
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
