@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className=" col-6"
+  >
+    <h3
+      className="ms-5 mt-3"
+    >
+      My Rockets
+    </h3>
+    <ul
+      className="list-group ms-5"
+    >
+      <li
+        className="list-group-item"
+      >
+        No Reserved Rockets
+      </li>
+    </ul>
+  </div>
+  <div
+    className="col-6"
+  >
+    <h3
+      className="ms-5 mt-3"
+    >
+      My Missions
+    </h3>
+    <ul
+      className="list-group ms-5"
+    >
+      <li
+        className="list-group-item"
+      >
+        No Mission Reserved
+      </li>
+    </ul>
+  </div>
+</div>
+`;
