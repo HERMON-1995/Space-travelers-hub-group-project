@@ -1,4 +1,4 @@
-# Space-travelers-hub-group-project
+# Space travelers hub project
 
 <a name="readme-top"></a>
 
@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Space-travelers-hub-group-project] <a name="about-project"></a>
+# 📖 [Space travelers hub group project] <a name="about-project"></a>
 
-**[Space-travelers-hub-group-project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
+**[Space travelers hub group project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Comming soon]
+- [See live here](https://space-travelers-hub-3yrr.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
