@@ -154,7 +154,7 @@ npx stylelint "**/*.{css,scss}"
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-    - [Issues](https://github.com/HERMON-1995/Space-travelers-hub-group-project/issues?q=is%3Aissue+is%3Aclosed)
+   - [Issues](https://github.com/HERMON-1995/Space-travelers-hub-group-project/issues?q=is%3Aissue+is%3Aclosed)
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
