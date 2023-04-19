@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Space travelers hub group project] <a name="about-project"></a>
+# 📖 [Space travelers hub project] <a name="about-project"></a>
 
-**[Space travelers hub group project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
+**[Space travelers hub project]** is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions from the SpaceX API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
